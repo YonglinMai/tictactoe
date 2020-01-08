@@ -1,4 +1,25 @@
+var player =""
+turnNum = 0
+var gameEnd = false
 
+function playerTurn (){
+    turnNum = turnNum + 1;
+    if (turnNum % 2 == 0){
+        player = "O";
+    }else{
+        player = "X";
+    };
+    if (turnNum == 9){
+        $("h1").text("It's a draw!")
+        turnNum = 0;
+    }
+}
+
+function performLogic (buttonId,TileId){
+    playerTurn();
+    $(buttonId).remove();
+    $(TileId).text(player);
+}
 
 
 
