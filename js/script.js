@@ -14,6 +14,22 @@ function playerTurn (){
         turnNum = 0;
     }
 }
+function checkVerticalWins (){
+    win("#tile1","#tile4","#tile7");
+    win("#tile2","#tile5","#tile8");
+    win("#tile3","#tile6","#tile9");
+}
+
+function checkHoritzontalWins(){
+    win("#tile1","#tile2","#tile3");
+    win("#tile4","#tile5","#tile6");
+    win("#tile7","#tile8","#tile9");
+}
+
+function checkDiagonalWins(){
+    win("#tile1","#tile5","#tile9");
+    win("#tile3","#tile5","#tile7");
+}
 
 function performLogic (buttonId,TileId){
     playerTurn();
